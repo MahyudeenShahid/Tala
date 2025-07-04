@@ -1,39 +1,39 @@
-function init(){
+function init() {
   gsap.registerPlugin(ScrollTrigger);
 
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+  // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#body"),
-  smooth: true
-});
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-locoScroll.on("scroll", ScrollTrigger.update);
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#body"),
+    smooth: true
+  });
+  // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+  locoScroll.on("scroll", ScrollTrigger.update);
 
-// tell ScrollTrigger to use these proxy methods for the "#body" element since Locomotive Scroll is hijacking things
-ScrollTrigger.scrollerProxy("#body", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-  pinType: document.querySelector("#body").style.transform ? "transform" : "fixed"
-});
+  // tell ScrollTrigger to use these proxy methods for the "#body" element since Locomotive Scroll is hijacking things
+  ScrollTrigger.scrollerProxy("#body", {
+    scrollTop(value) {
+      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+    }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+    getBoundingClientRect() {
+      return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    },
+    // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+    pinType: document.querySelector("#body").style.transform ? "transform" : "fixed"
+  });
 
 }
 init();
 
 
 
-let menu= document.querySelector("#menu")
-let pmenu=document.querySelector("#pageMenu")
-let menubar=false
-menu.addEventListener("click" , function() {
- if(!menubar)
-  {pmenu.style.top = "0%";
-    pmenu.style.opacity="1";
+let menu = document.querySelector("#menu")
+let pmenu = document.querySelector("#pageMenu")
+let menubar = false
+menu.addEventListener("click", function () {
+  if (!menubar) {
+    pmenu.style.top = "0%";
+    pmenu.style.opacity = "1";
     line1.style.backgroundColor = `#232025`;
     line2.style.backgroundColor = `#232025`;
     line1.style.transform = `rotate(40deg)`;
@@ -43,13 +43,13 @@ menu.addEventListener("click" , function() {
     line2.style.height = `4px`;
     line2.style.transform = `rotate(-40deg)`;
     line2.style.backgroundColor = `#232025`;
-    document.querySelector("nav").style.color="#2b2b2b"
-    menubar=true
+    document.querySelector("nav").style.color = "#2b2b2b"
+    menubar = true
   }
-  else{
-pmenu.style.top = "-100%";
-pmenu.style.opacity="0";
-line1.style.backgroundColor = `#cecece`;
+  else {
+    pmenu.style.top = "-100%";
+    pmenu.style.opacity = "0";
+    line1.style.backgroundColor = `#cecece`;
     line2.style.backgroundColor = `#cecece`;
     line1.style.transform = `rotate(00deg)`;
     line1.style.width = `100%`;
@@ -59,34 +59,34 @@ line1.style.backgroundColor = `#cecece`;
     line2.style.transform = `rotate(-0deg)`;
     line2.style.backgroundColor = `#cecece`;
     // document.getElementById('nav').style.color = `#cecece`;
-document.querySelector("nav").style.color=`#cecece`
-menubar=false
+    document.querySelector("nav").style.color = `#cecece`
+    menubar = false
   }
-}) 
+})
 
 let tl = gsap.timeline();
 tl.from(".page1 h1", {
-    y: 60,
-    duration: .6,
-    opacity: 0,
-    // ease: "power2.out"
+  y: 60,
+  duration: .6,
+  opacity: 0,
+  // ease: "power2.out"
 })
-.from(".page1 h2", {
+  .from(".page1 h2", {
     y: 50,
     duration: .5,
     opacity: 0,
 
     delay: "-0.2"
 
-})
-.from(".page1 h3", {
+  })
+  .from(".page1 h3", {
     y: 50,
     duration: .5,
     opacity: 0,
 
-     delay: "-0.2"
+    delay: "-0.2"
 
-})
+  })
 
 gsap.to(".tala-img", {
   scale: 0.99,
@@ -104,13 +104,14 @@ gsap.to(".hg h1", {
   rotateX: "0deg",
   // y: -50,
   opacity: 1,
-  // duration: 1,
+  duration: 3,
   scrollTrigger: {
     trigger: ".hg ",
     scroller: "#body",
-    start: "top 60%",
+    start: "top 70%",
     end: "top 50%",
-    scrub: 3,
+    scrub: 5,
+    // markers: true,
     // toggleActions: "play none none reverse"
   },
 })
@@ -118,14 +119,14 @@ gsap.to(".hg h1", {
 
 
 let slide1 = document.querySelectorAll("#page6 .slide1");
-slide1.forEach(function(elem){
-  gsap.to(elem,{
+slide1.forEach(function (elem) {
+  gsap.to(elem, {
     transform: 'translateX(-100%)',
-    duration:4,
-    scrollTrigger:{
+    duration: 4,
+    scrollTrigger: {
       trigger: "#page6",
       scroller: "#body",
-      scrub:3,
+      scrub: 3,
 
     }
   })
@@ -143,14 +144,14 @@ gsap.to('#part2 #line', {
 })
 
 let slide2 = document.querySelectorAll("#page6 .slide2");
-slide2.forEach(function(elem){
-  gsap.to(elem,{
+slide2.forEach(function (elem) {
+  gsap.to(elem, {
     transform: 'translateX(0%)',
-    duration:4,
-    scrollTrigger:{
+    duration: 4,
+    scrollTrigger: {
       trigger: "#page6",
       scroller: "#body",
-      scrub:3,
+      scrub: 3,
 
     }
   })
@@ -223,7 +224,7 @@ gsap.to('#finish', {
     start: 'top 35%',
   },
   opacity: 1,
-  duration:1,
+  duration: 1,
   onStart: function () {
     $(document).ready(function () {
       $('#finish h1').textillate({ in: { effect: 'fadeInUp' } });
@@ -233,26 +234,26 @@ gsap.to('#finish', {
 
 
 
-document.querySelector("#elm1").addEventListener("mouseover", function(dets) {
+document.querySelector("#elm1").addEventListener("mouseover", function (dets) {
   this.querySelector(".elm1 .hover-img").style.opacity = "1";
-  this.querySelector(".elm1 .hover-img").style.left = dets.x  + 'px';
-  this.querySelector(".elm1 .hover-img").style.top = dets.y-50  + 'px';
-  
+  this.querySelector(".elm1 .hover-img").style.left = dets.x + 'px';
+  this.querySelector(".elm1 .hover-img").style.top = dets.y - 50 + 'px';
+
 }
 );
 
-document.querySelector("#elm2").addEventListener("mouseover", function(dets) {
+document.querySelector("#elm2").addEventListener("mouseover", function (dets) {
   this.querySelector(".elm2 .hover-img").style.opacity = "1";
-  this.querySelector(".elm2 .hover-img").style.left = dets.x  + 'px';
-  this.querySelector(".elm2 .hover-img").style.top = dets.y-50  + 'px';
+  this.querySelector(".elm2 .hover-img").style.left = dets.x + 'px';
+  this.querySelector(".elm2 .hover-img").style.top = dets.y - 50 + 'px';
 }
 );
-document.querySelector("#elm1").addEventListener("mouseleave", function() {
+document.querySelector("#elm1").addEventListener("mouseleave", function () {
   this.querySelector(".elm1 .hover-img").style.opacity = "0";
 }
 );
 
-document.querySelector("#elm2").addEventListener("mouseleave", function() {
+document.querySelector("#elm2").addEventListener("mouseleave", function () {
   this.querySelector(".elm2 .hover-img").style.opacity = "0";
 }
 );
@@ -260,8 +261,8 @@ document.querySelector("#elm2").addEventListener("mouseleave", function() {
 
 
 gsap.to(".pg5-content img", {
-  rotate : "360deg",
-  repeat:-1,
+  rotate: "360deg",
+  repeat: -1,
   duration: 2,
- ease: "none"
+  ease: "none"
 })
