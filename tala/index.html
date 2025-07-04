@@ -8,39 +8,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="lcm.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets1/img/favicon/favicon.ico" type="image/x-icon">
     <title>TALA | Single Ingredients Fruit snack</title>
 </head>
 
 <body>
-    <div class="body" id="body">
-        <div id="pageMenu">
-            <h1>MENU</h1>
-            <div id="opt">
-                <h4>Mango</h4>
-                <h4>Banana</h4>
-                <h4>Pineapple</h4>
-                <h4>Pithaya</h4>
-                <h4>Variety</h4>
-                <h4>Sampler</h4>
-                <h4>About</h4>
-                <h4>FAQs</h4>
-                <h4>Contacts</h4>
+    <div id="pageMenu">
+        <h1>MENU</h1>
+        <div id="opt">
+            <h4>Mango</h4>
+            <h4>Banana</h4>
+            <h4>Pineapple</h4>
+            <h4>Pithaya</h4>
+            <h4>Variety</h4>
+            <h4>Sampler</h4>
+            <h4>About</h4>
+            <h4>FAQs</h4>
+            <h4>Contacts</h4>
+        </div>
+    </div>
+    <nav>
+        <div class="logo">
+            Tala
+        </div>
+        <div class="navp2">
+            <div class="cart">
+                Cart <span>0</span>
+            </div>
+            <div id="menu" class="menu">
+                <div class=" tline" id="line1"></div>
+                <div class=" tline" id="line2"></div>
+
             </div>
         </div>
-        <nav>
-            <div class="logo">
-                Tala
-            </div>
-            <div class="navp2">
-                <div class="cart">
-                    Cart <span>0</span>
-                </div>
-                <div id="menu" class="menu">H</div>
-            </div>
-        </nav>
-
+    </nav>
+    <div class="body" id="body">
+        <div class="top"></div>
         <div class="page1">
             <h1>TALA</h1>
             <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An Entirely <br>new fruit snack - <br>made of fruit</h2>
@@ -50,20 +58,68 @@
 
 
         </div>
-        <img class="tala-img" src="assets/img/1.jpg" alt="TALA">
         <div id="page2" class="page2">
+            <img class="tala-img" src="assets1/img/1.jpg" alt="TALA">
             <div class="hg">
                 <h1>We’re bringing fruit snacks back to </h1>
                 <h1>their roots with <span> perfectly ripe fruit </span></h1>
                 <h1><span> bursting with flavor.</span></h1>
             </div>
+
+
+
+            <div class="page3" id="part2">
+                <div id="line">
+                    <h6>Available in</h6>
+                </div>
+                <div class="fruit" id="mango">
+                    <div class="card mangocard">
+                        <h2>TALA <br>01</h2>
+                        <h3>ingredients: Mango</h3>
+                    </div>
+                    <h5>01</h5>
+                    <h1 class="fruitname">Mango</h1>
+                    <p><i class="ri-arrow-right-up-line"></i></p>
+                </div>
+                <div class="fruit" id="Banana">
+                    <div class="card bananacard">
+                        <h2>TALA <br>01</h2>
+                        <h3>ingredients: banana</h3>
+                    </div>
+                    <h5>02</h5>
+                    <h1 class="fruitname">Banana</h1>
+                    <p><i class="ri-arrow-right-up-line"></i></p>
+                </div>
+                <div class="fruit" id="PineApple">
+                    <h5>03</h5>
+                    <div class="card pinecard">
+                        <h2>TALA <br>01</h2>
+                        <h3>ingredients: pineapple</h3>
+                    </div>
+                    <h1 class="fruitname">PineApple</h1>
+                    <p><i class="ri-arrow-right-up-line"></i></p>
+                </div>
+                <div class="fruit" id="Pithaya">
+                    <h5>04</h5>
+                    <div class="card pithayacard">
+                        <h2>TALA <br>01</h2>
+                        <h3>ingredients: pithaya</h3>
+                    </div>
+                    <h1 class="fruitname">Pithaya</h1>
+                    <p><i class="ri-arrow-right-up-line"></i></p>
+                </div>
+                <div class="fruit" id="Variety">
+                    <h5>05</h5>
+                    <h1 class="fruitname">Variety</h1>
+                    <p><i class="ri-arrow-right-up-line"></i></p>
+                </div>
+            </div>
         </div>
 
-        <div class="page3"></div>
-        <div class="page4">
-            <h1> I FINISHED THE <br>
-                BOX & REGRET <br>
-                NOTHING.</h1>
+        <div class="page4" id="finish">
+            <h1>I FINISHED THE</h1>
+            <h1>BOX & REGRET</h1>
+            <h1>NOTHING.</h1>
         </div>
 
         <div class="page5">
@@ -89,7 +145,7 @@
                     space. Now you just have to figure out <br>
                     how to get there.</h4>
 
-                <img src="assets/img/smiley.svg" alt="smiley">
+                <img src="assets1/img/smiley.svg" alt="smiley">
             </div>
         </div>
         <div class="page6" id="page6">
@@ -124,16 +180,63 @@
                 <span>contain fruit?</span>
             </h1>
             <div class="elm">
-                <div class="elm1">
+                <div class="elm1" id="elm1">
                     <h1>yes</h1>
-                    <img  src="assets/img/banana gif.gif" alt="fruit gif">
+                    <div class="hover-img">
+                        <img src="assets1/img/banana gif.gif" alt="fruit gif">
+                    </div>
                 </div>
-                <div class="elm2">
+                <div class="elm2" id="elm2">
                     <h1>no</h1>
-                    <img  src="assets/img/option2 gif.gif" alt="chocalate gif">
+                    <div class="hover-img">
+                        <img src="assets1/img/option2 gif.gif" alt="chocalate gif">
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="page8">
+            <h1>Snack better.</h1>
+            <div class="products">
+                <div class="product" id="product1">
+                    <img src="assets1/img/dq.png" alt="">
+                </div>
+                <div class="product" id="product2">
+                    <img src="assets1/img/d2.png" alt="">
+                </div>
+                <div class="product" id="product3">
+                    <img src="assets1/img/d3.png" alt="">
+                </div>
+                <div class="product" id="product4">
+                    <img src="assets1/img/d4.png" alt="">
+                </div>
+                <div class="product" id="product5">
+                    <img src="assets1/img/d5.png" alt="">
+                </div>
+            </div>
+        </div>
+        <footer class="tfooter">
+            <div class="line"></div>
+            <div class="footer">
+                <h1>Developed by <a id="name" href="https://mahyudeen.me/"> Mahyudeen Shahid </a> with <span
+                        class="heart">❤</span> </h1>
+
+                <div class="foot_social">
+                    <a title="Linkedin" href="https://www.linkedin.com/in/mahyudeen" target="_blank"
+                        class="foot_social_link">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a title="Instagram" href="https://www.instagram.com/mahyudeen_jutt?igsh=YXU4aXk1ZXR2eDN5"
+                        target="_blank" class="foot_social_link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a title="Github" href="https://github.com/MahyudeenShahid" target="_blank"
+                        class="foot_social_link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
@@ -143,6 +246,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
         integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- jQuery (must come first) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Animate.css for text effects -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Lettering.js (required by Textillate) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+
+    <!-- ✅ Textillate.js (this was missing or 404) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+
     <script src="script.js"></script>
 </body>
 
