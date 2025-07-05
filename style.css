@@ -777,6 +777,7 @@ nav .logo {
 
     .fruit i {
         font-size: 40px;
+        z-index: 100;
     }
 
     .fruit {
@@ -921,6 +922,7 @@ nav .logo {
 
     nav .cart {
         font-size: 4vh;
+        padding-top: 7px;
     }
 
     #menu {
@@ -940,4 +942,7 @@ nav .logo {
         margin-top: 10vh
     }
 
+    body {
+        overflow-x: hidden;
+    }
 }
